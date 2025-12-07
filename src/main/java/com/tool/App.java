@@ -10,28 +10,28 @@ public class App {
 
     public static void main(String[] args) {
 
-        String code = null;
-
-        // Read store code from file
         try (BufferedReader br = new BufferedReader(new FileReader("input.txt"))) {
-            code = br.readLine();
-            if (code != null) {
+
+            String code;
+            // loop over all lines in the file
+            while ((code = br.readLine()) != null) {
                 code = code.trim();
-            } else {
-                System.out.println("Store code not found in the file.");
-                return;
+                if (code.isEmpty()) {
+                    continue; // skip blank lines
+                }
+
+                DbConnectionUtil.configure(code);
+
+                BatchDao dao = new BatchDao();
+                String ts = dao.getAveragePoslogTimestamp();
+
+                System.out.println("Store Code: " + code);
+                System.out.println("Average POSLOG Generated time: " + ts);
+                System.out.println("-------------------------------------");
             }
+
         } catch (IOException e) {
-            System.out.println("Error reading store.txt: " + e.getMessage());
-            return;
+            System.out.println("Error reading input.txt: " + e.getMessage());
         }
-
-        DbConnectionUtil.configure(code);
-
-        BatchDao dao = new BatchDao();
-        String ts = dao.getAveragePoslogTimestamp();
-
-        System.out.println("Store Code: " + code);
-        System.out.println("Average POSLOG Generated time: " + ts);
     }
 }
