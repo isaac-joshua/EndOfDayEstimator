@@ -13,7 +13,7 @@ public class BatchDao {
 
     // Select last 10 POSLOG timestamps
     private static final String QUERY =
-            "SELECT batch_timestamp FROM batch WHERE batch_type = 'POSLOG' ORDER BY batch_timestamp DESC LIMIT 15";
+            "SELECT batch_timestamp FROM batch WHERE batch_type = 'POSLOG' ORDER BY batch_timestamp DESC LIMIT 1";
 
     public String getAveragePoslogTimestamp() {
         long sum = 0;
