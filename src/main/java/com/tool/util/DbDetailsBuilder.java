@@ -18,12 +18,12 @@ public class DbDetailsBuilder {
         if (storeNo.length() == 4) {
             host = "R" + country + storeNo + "-lx2020.ikea.com";
 
-            // 4‑digit store: want pip0 + 4 digits (01094 from 1094)
+            // for 4‑digit store: pip0 + 4 digits (01094 from 1094)
             int storeInt = Integer.parseInt(storeNo);
             String padded = String.format("%05d", storeInt);            // "%05d" is a format specifier: % = start of the specifier.0 = pad with zeros instead of spaces.5 = total width should be 5 characters.d = format the value as a decimal integer
             dbPath = "pip" + padded + "?";                                  //"pip01234"
         } else if (storeNo.length() == 3) {
-            // Existing behavior: DK121 -> RETDK121-lx2020.ikea.com / pip00121?
+            // eg of dk store DK121 -> RETDK121-lx2020.ikea.com pip00121?
             host = "RET" + country + storeNo + "-lx2020.ikea.com";
 
             int storeInt = Integer.parseInt(storeNo);

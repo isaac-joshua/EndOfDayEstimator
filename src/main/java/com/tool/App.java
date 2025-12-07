@@ -13,7 +13,6 @@ public class App {
         try (BufferedReader br = new BufferedReader(new FileReader("input.txt"))) {
 
             String code;
-            // loop over all lines in the file
             while ((code = br.readLine()) != null) {
                 code = code.trim();
                 if (code.isEmpty()) {
