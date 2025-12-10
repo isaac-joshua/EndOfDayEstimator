@@ -3,20 +3,23 @@ package com.tool;
 import com.tool.dao.BatchDao;
 import com.tool.util.DbConnectionUtil;
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 
 public class App {
 
     public static void main(String[] args) {
 
-        try (BufferedReader br = new BufferedReader(new FileReader("input.txt"))) {
+        try (BufferedReader br = new BufferedReader(new FileReader("input.txt"));
+             BufferedWriter out = new BufferedWriter(new FileWriter("output.txt"))) {
 
             String code;
             while ((code = br.readLine()) != null) {
                 code = code.trim();
                 if (code.isEmpty()) {
-                    continue; // skip blank lines
+                    continue;
                 }
 
                 DbConnectionUtil.configure(code);
@@ -24,13 +27,18 @@ public class App {
                 BatchDao dao = new BatchDao();
                 String ts = dao.getAveragePoslogTimestamp();
 
-                System.out.println("Store Code: " + code);
-                System.out.println("Average POSLOG Generated time: " + ts);
-                System.out.println("-------------------------------------");
+                out.write("Store Code: " + code);
+                out.newLine();                                   // line break[web:124]
+                out.write("Average POSLOG Generated time: " + ts);
+                out.newLine();
+                out.write("-------------------------------------");
+                out.newLine();
+
+                System.out.println("Processed store " + code);
             }
 
         } catch (IOException e) {
-            System.out.println("Error reading input.txt: " + e.getMessage());
+            System.out.println("Error reading/writing file: " + e.getMessage());
         }
     }
 }
