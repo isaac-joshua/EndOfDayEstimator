@@ -12,7 +12,7 @@ import java.time.ZoneId;
 public class BatchDao {
 
     private static final String QUERY =
-            "SELECT batch_timestamp FROM batch WHERE batch_type = 'POSLOG' ORDER BY batch_timestamp DESC LIMIT 1";
+            "SELECT batch_timestamp FROM batch WHERE batch_type = 'POSLOG' ORDER BY batch_timestamp DESC LIMIT 15";
 
     public String getAveragePoslogTimestamp() {
         long sum = 0;
@@ -21,7 +21,7 @@ public class BatchDao {
         try (Connection conn = DbConnectionUtil.getConnection();
              PreparedStatement ps = conn.prepareStatement(QUERY)) {
 
-            ResultSet rs = ps.executeQuery();
+            ResultSet rs = ps.executeQuery(); //row
 
             while (rs.next()) {
                 long ts = rs.getLong("batch_timestamp");

@@ -18,8 +18,9 @@ public class App {
             String code;
             while ((code = br.readLine()) != null) {
                 code = code.trim();
+
                 if (code.isEmpty()) {
-                    continue;
+                    break;
                 }
 
                 DbConnectionUtil.configure(code);
@@ -28,7 +29,7 @@ public class App {
                 String ts = dao.getAveragePoslogTimestamp();
 
                 out.write("Store Code: " + code);
-                out.newLine();                                   // line break[web:124]
+                out.newLine();
                 out.write("Average POSLOG Generated time: " + ts);
                 out.newLine();
                 out.write("-------------------------------------");
