@@ -2,7 +2,7 @@
 
 # EOD POSLOG Estimator
 
-Small Java CLI tool that connects to PostgreSQL store databases and prints the typical POSLOG generation time for each store.
+Small Java tool that connects to PostgreSQL store databases and prints the typical POSLOG generation time for each store.
 
 ## What it does
 
