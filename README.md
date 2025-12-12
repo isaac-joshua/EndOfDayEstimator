@@ -10,8 +10,8 @@ Small Java tool that connects to PostgreSQL store databases and prints the typic
 - Builds the correct JDBC URL for each store based on country and store number.
 - Connects to the store database using PostgreSQL JDBC.
 - Fetches recent POSLOG batch timestamps and calculates an average timestamp.
-- Writes results to `output.txt`.
-
+- Determines if the End Of Day is completed based on the availability of the POSLOG file for the current day.
+- Writes results to `AverageTimings.txt` and `TodaysEOD.txt`.
 
 ## Usage
 
