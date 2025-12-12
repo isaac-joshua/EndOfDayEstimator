@@ -8,12 +8,12 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class App {
+public class AverageEOD {
 
     public static void main(String[] args) {
 
         try (BufferedReader br = new BufferedReader(new FileReader("input.txt"));
-             BufferedWriter out = new BufferedWriter(new FileWriter("output.txt"))) {
+             BufferedWriter out = new BufferedWriter(new FileWriter("AverageTimings.txt"))) {
 
             String code;
             while ((code = br.readLine()) != null) {

@@ -1,6 +1,6 @@
 package com.tool;
 
-import com.tool.dao.Batch2Dao;
+import com.tool.dao.BatchDao;
 import com.tool.util.DbConnectionUtil;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -13,7 +13,7 @@ public class EodCheck {
     public static void main(String[] args) {
 
         try (BufferedReader br = new BufferedReader(new FileReader("input.txt"));
-             BufferedWriter out = new BufferedWriter(new FileWriter("output.txt"))) {
+             BufferedWriter out = new BufferedWriter(new FileWriter("TodaysEOD.txt"))) {
 
             String code;
             while ((code = br.readLine()) != null) {
@@ -25,7 +25,7 @@ public class EodCheck {
 
                 DbConnectionUtil.configure(code);
 
-                Batch2Dao dao = new Batch2Dao();
+                BatchDao dao = new BatchDao();
                 String ts = dao.checkLatestPoslogDate();
 
                 out.write("Store Code: " + code);
