@@ -1,12 +1,3 @@
-Store Code: CA1094
-Average POSLOG Generated time: 2025-12-04T02:06:09.077
--------------------------------------
-Store Code: ES674
-Average POSLOG Generated time: 2025-12-03T22:26:40.171
--------------------------------------
-Store Code: ES304
-Average POSLOG Generated time: 2025-12-03T13:28:32.596
--------------------------------------
-Store Code: CA529
-Average POSLOG Generated time: 2025-12-04T01:18:05.391
+Store Code: IN501
+Average POSLOG Generated time: 2025-11-27T08:23:13.879UTC
 -------------------------------------

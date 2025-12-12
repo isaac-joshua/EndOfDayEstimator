@@ -35,3 +35,39 @@ public class App {
         }
     }
 }
+ mention utc
+ compare with todays date (date fnc)
+ add date and yes or no eod
+
+ AT155
+ AU384
+ BE179
+ CA659
+ CH275
+ CN247
+ CZ178
+ DE333
+ DK298
+ ES030
+ ES1173
+ FI422
+ FR133
+ GB702
+ HU180
+ IN720
+ IT303
+ JP447
+ KR602
+ NL404
+ NO007
+ NZ614
+ PL188
+ PT499
+ RO500
+ RU609
+ SE020
+ SK489
+ US211
+
+
+

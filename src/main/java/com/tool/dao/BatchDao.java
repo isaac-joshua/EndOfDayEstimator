@@ -12,7 +12,7 @@ import java.time.ZoneId;
 public class BatchDao {
 
     private static final String QUERY =
-            "SELECT batch_timestamp FROM batch WHERE batch_type = 'POSLOG' ORDER BY batch_timestamp DESC LIMIT 15";
+            "SELECT batch_timestamp FROM batch WHERE batch_type = 'POSLOG' ORDER BY batch_timestamp DESC LIMIT 50";
 
     public String getAveragePoslogTimestamp() {
         long sum = 0;

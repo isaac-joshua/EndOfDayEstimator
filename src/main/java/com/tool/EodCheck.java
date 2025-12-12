@@ -1,6 +1,6 @@
 package com.tool;
 
-import com.tool.dao.BatchDao;
+import com.tool.dao.Batch2Dao;
 import com.tool.util.DbConnectionUtil;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -8,7 +8,7 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class App {
+public class EodCheck {
 
     public static void main(String[] args) {
 
@@ -25,12 +25,12 @@ public class App {
 
                 DbConnectionUtil.configure(code);
 
-                BatchDao dao = new BatchDao();
-                String ts = dao.getAveragePoslogTimestamp();
+                Batch2Dao dao = new Batch2Dao();
+                String ts = dao.checkLatestPoslogDate();
 
                 out.write("Store Code: " + code);
                 out.newLine();
-                out.write("Average POSLOG Generated time: " + ts + "UTC");
+                out.write(ts);
                 out.newLine();
                 out.write("-------------------------------------");
                 out.newLine();
