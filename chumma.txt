@@ -35,9 +35,7 @@ public class App {
         }
     }
 }
- mention utc
- compare with todays date (date fnc)
- add date and yes or no eod
+
 
  AT155
  AU384

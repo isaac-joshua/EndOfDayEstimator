@@ -10,7 +10,7 @@ import java.time.*;
 public class BatchDao {
 
     private static final String AVGQUERY =
-            "SELECT batch_timestamp FROM batch WHERE batch_type = 'POSLOG'AND EXTRACT(DOW FROM to_timestamp(batch_timestamp / 1000.0)) BETWEEN 1 AND 5 ORDER BY batch_timestamp DESC LIMIT 25";
+            "SELECT batch_timestamp FROM batch WHERE batch_type = 'POSLOG'AND EXTRACT(DOW FROM to_timestamp(batch_timestamp / 1000.0)) BETWEEN 1 AND 5 ORDER BY batch_timestamp DESC LIMIT 22";
 
     private static final String TODAYQUERY =
             "SELECT batch_timestamp FROM batch " +
