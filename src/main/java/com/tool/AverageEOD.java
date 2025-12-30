@@ -30,6 +30,11 @@ public class AverageEOD {
 
                 out.write("Store Code: " + code);
                 out.newLine();
+                if(ts.equals("No POSLOG found")){
+                    out.write(ts);
+                    out.newLine();
+                    }
+                else
                 out.write("Average POSLOG Generated time: " + ts + "UTC");
                 out.newLine();
                 out.write("-------------------------------------");

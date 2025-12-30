@@ -18,7 +18,7 @@ Small Java tool that connects to PostgreSQL store databases and prints the typic
 1. Put your store codes in `input.txt`, one per line.
 2. Build the project: mvn clean package
 3. Run: java -cp target/eod-estimator-1.0-SNAPSHOT.jar com.tool.App
-4. Check `output.txt` for the report.
+4. Check `AverageTimings.txt` and `TodaysEOD.txt` for the report.
 
 
 

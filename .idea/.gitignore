@@ -3,7 +3,7 @@
 /workspace.xml
 # Editor-based HTTP Client requests
 /httpRequests/
-output.txt
-chumma.txt
-AverageTimings.txt
-TodaysEod.txt
+/output.txt
+/chumma.txt
+/AverageTimings.txt
+/TodaysEod.txt
