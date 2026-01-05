@@ -1,28 +1,25 @@
 Store Code: RO500
 EOD Not yet Done 
-Latest POSLOG is from 2025-12-24T17:22:00.211
+Latest POSLOG is from 2025-12-29T21:54:12.901
 -------------------------------------
 Store Code: SE1015
 EOD Not yet Done 
-Latest POSLOG is from 2025-12-24T16:12:51.495
+Latest POSLOG is from 2025-12-29T21:11:17.431
 -------------------------------------
 Store Code: CA529
-EOD Not yet Done 
-Latest POSLOG is from 2025-12-24T22:30:28.049
+EOD is Done 2025-12-30T01:56:27.936
 -------------------------------------
 Store Code: US1100
-EOD Not yet Done 
-Latest POSLOG is from 2025-12-25T00:58:02.259
+EOD is Done 2025-12-30T04:10:09.889
 -------------------------------------
 Store Code: GB141
 EOD Not yet Done 
-Latest POSLOG is from 2025-12-23T23:24:42.615
+Latest POSLOG is from 2025-12-29T23:54:21.164
 -------------------------------------
 Store Code: IN501
 EOD Not yet Done 
-Latest POSLOG is from 2025-12-24T20:13:09.598
+Latest POSLOG is from 2025-12-29T20:56:26.055
 -------------------------------------
-Store Code: US707
-EOD Not yet Done 
-Latest POSLOG is from 2025-12-10T19:14:11.207
+Store Code: US1147
+EOD is Done 2025-12-30T03:32:12.251
 -------------------------------------

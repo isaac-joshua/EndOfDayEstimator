@@ -1,21 +1,21 @@
 Store Code: RO500
-Average POSLOG Generated time: 20:51:44UTC
+Average POSLOG Generated time: 20:40:23UTC
 -------------------------------------
 Store Code: SE1015
-Average POSLOG Generated time: 21:13:47UTC
+Average POSLOG Generated time: 21:14:21UTC
 -------------------------------------
 Store Code: CA529
-Average POSLOG Generated time: 02:48:50UTC
+Average POSLOG Generated time: 02:52:44UTC
 -------------------------------------
 Store Code: US1100
-Average POSLOG Generated time: 04:32:15UTC
+Average POSLOG Generated time: 04:34:31UTC
 -------------------------------------
 Store Code: GB141
-Average POSLOG Generated time: 22:23:35UTC
+Average POSLOG Generated time: 22:11:41UTC
 -------------------------------------
 Store Code: IN501
-Average POSLOG Generated time: 19:36:40UTC
+Average POSLOG Generated time: 19:12:34UTC
 -------------------------------------
-Store Code: US707
-Average POSLOG Generated time: 08:17:40UTC
+Store Code: US1147
+Average POSLOG Generated time: 03:20:35UTC
 -------------------------------------

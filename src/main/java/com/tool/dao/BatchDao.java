@@ -1,6 +1,7 @@
 package com.tool.dao;
 
 import com.tool.util.DbConnectionUtil;
+import org.omg.CORBA.PUBLIC_MEMBER;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -16,6 +17,21 @@ public class BatchDao {
             "SELECT batch_timestamp FROM batch " +
                     "WHERE batch_type = 'POSLOG' " +
                     "ORDER BY batch_timestamp DESC LIMIT 1";
+
+    private static final String VERSIONQUERY = "SELECT Version();";
+
+    public String GetDBVersion() {
+        try (Connection conn = DbConnectionUtil.getConnection();
+             PreparedStatement ps = conn.prepareStatement(VERSIONQUERY)) {
+            ResultSet rs = ps.executeQuery();
+
+            if (rs.next()) {
+                return rs.getString(1);
+            }
+            System.out.println(rs);
+        } catch (Exception e) {}
+        return "error";
+    }
 
     public String getAveragePoslogTimestamp() {
         long sum = 0;

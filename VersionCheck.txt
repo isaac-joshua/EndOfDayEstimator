@@ -1,0 +1,21 @@
+Store Code: RO500
+PostgreSQL 14.11 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 11.4.1 20230605 (Red Hat 11.4.1-2), 64-bit
+-------------------------------------
+Store Code: SE1015
+PostgreSQL 14.11 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 11.4.1 20230605 (Red Hat 11.4.1-2), 64-bit
+-------------------------------------
+Store Code: CA529
+PostgreSQL 14.11 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 11.4.1 20230605 (Red Hat 11.4.1-2), 64-bit
+-------------------------------------
+Store Code: US1100
+PostgreSQL 14.11 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 11.4.1 20230605 (Red Hat 11.4.1-2), 64-bit
+-------------------------------------
+Store Code: GB141
+PostgreSQL 14.11 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 11.4.1 20230605 (Red Hat 11.4.1-2), 64-bit
+-------------------------------------
+Store Code: IN501
+PostgreSQL 14.11 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 11.4.1 20230605 (Red Hat 11.4.1-2), 64-bit
+-------------------------------------
+Store Code: US1147
+PostgreSQL 14.11 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 11.4.1 20230605 (Red Hat 11.4.1-2), 64-bit
+-------------------------------------
