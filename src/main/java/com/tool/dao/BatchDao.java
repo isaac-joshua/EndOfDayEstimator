@@ -1,12 +1,17 @@
 package com.tool.dao;
 
 import com.tool.util.DbConnectionUtil;
-import org.omg.CORBA.PUBLIC_MEMBER;
-
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.time.*;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.Instant;
+import java.time.LocalTime;
+import java.time.ZoneId;
+import java.util.Set;
+import java.util.HashSet;
 
 public class BatchDao {
 
@@ -37,10 +42,17 @@ public class BatchDao {
         long sum = 0;
         int count = 0;
 
+        // Change holidays
+        Set<LocalDate> holidays = new HashSet<>();
+        holidays.add(LocalDate.of(2025, 12, 25));
+        holidays.add(LocalDate.of(2025, 12, 26));
+        holidays.add(LocalDate.of(2025, 12, 31));
+        holidays.add(LocalDate.of(2026, 1, 1));
+
         try (Connection conn = DbConnectionUtil.getConnection();
              PreparedStatement ps = conn.prepareStatement(AVGQUERY)) {
 
-            ResultSet rs = ps.executeQuery(); //row
+            ResultSet rs = ps.executeQuery();
 
             while (rs.next()) {
                 long ts = rs.getLong("batch_timestamp");
@@ -49,23 +61,31 @@ public class BatchDao {
                         .atZone(ZoneId.systemDefault())
                         .toLocalDateTime();
 
-                int secondsOfDay = dt.toLocalTime().toSecondOfDay(); // 0..86399[web:231][web:237]
+                LocalDate date = dt.toLocalDate();
+                if (holidays.contains(date)) {
+                    // skip these specific dates
+                    continue;
+                }
+
+                int secondsOfDay = dt.toLocalTime().toSecondOfDay();
                 sum += secondsOfDay;
                 count++;
             }
 
             if (count == 0) return "No POSLOG found";
 
-            long avgMillis = sum / count;
+            long avgSeconds = sum / count;
+            LocalTime avgTime = LocalTime.ofSecondOfDay(avgSeconds);
 
-            LocalTime avgTime = LocalTime.ofSecondOfDay(avgMillis);
+            return avgTime.toString();
 
-            return avgTime.toString(); // e.g., 2025-01-26T22:37:13
-
-        } catch (Exception e) {}
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
         return "No POSLOG found";
     }
+
     public String checkLatestPoslogDate() {
         try (Connection conn = DbConnectionUtil.getConnection();
              PreparedStatement ps = conn.prepareStatement(TODAYQUERY)) {
